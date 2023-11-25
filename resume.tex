@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%
 % This is an sample CV template created using altacv.cls
-% (v1.1.5, 1 December 2018) written by LianTze Lim (liantze@gmail.com). Now compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
+% (v1.7, 9 August 2023) written by LianTze Lim (liantze@gmail.com). Compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
 %
 %% It may be distributed and/or modified under the
 %% conditions of the LaTeX Project Public License, either version 1.3
@@ -11,116 +11,147 @@
 %% version 2003/12/01 or later.
 %%%%%%%%%%%%%%%%
 
-%% If you need to pass whatever options to xcolor
-\PassOptionsToPackage{dvipsnames}{xcolor}
-
-%% If you are using \orcid or academicons
-%% icons, make sure you have the academicons
-%% option here, and compile with XeLaTeX
-%% or LuaLaTeX.
-% \documentclass[10pt,a4paper,academicons]{altacv}
+% Tell LaTeX to look in AltaCV subfolder
+\makeatletter
+   \def\input@path{{./AltaCV}}
+\makeatother
 
 %% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
 % \documentclass[10pt,a4paper,normalphoto]{altacv}
 
-\documentclass[10.5pt,a4paper,ragged2e]{altacv}
-
-%% AltaCV uses the fontawesome and academicon fonts
-%% and packages.
-%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
+\documentclass[10.5pt,a4paper,ragged2e,withhyper]{altacv}
+%% AltaCV uses the fontawesome5 and packages.
+%% See http://texdoc.net/pkg/fontawesome5 for full list of symbols.
 
 % Change the page layout if you need to
-\geometry{left=1.5cm,right=9.5cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=2cm,bottom=2cm}
+\geometry{left=1.5cm,right=1.5cm,top=2cm,bottom=2cm,columnsep=1cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
 
 % Change the font if you want to, depending on whether
 % you're using pdflatex or xelatex/lualatex
+% WHEN COMPILING WITH XELATEX PLEASE USE
+% xelatex -shell-escape -output-driver="xdvipdfmx -z 0" sample.tex
 \ifxetexorluatex
   % If using xelatex or lualatex:
-  \setmainfont{Lato}
+  \setmainfont{Roboto Slab}
+  \setsansfont{Lato}
+  \renewcommand{\familydefault}{\sfdefault}
 \else
   % If using pdflatex:
-  \usepackage[utf8]{inputenc}
-  \usepackage[T1]{fontenc}
-  \usepackage[default]{lato}
+  \usepackage[rm]{roboto}
+  \usepackage[defaultsans]{lato}
+  % \usepackage{sourcesanspro}
+  \renewcommand{\familydefault}{\sfdefault}
 \fi
 
-\usepackage{hyperref}
-\hypersetup{
-  bookmarks=false,
-  pdftoolbar=false,
-  pdfmenubar=false,
-  colorlinks=false,
-  hidelinks=false
-}
-\urlstyle{same}
+\input{colorschemes/oldcolors}
+% Color assignments
+\pagecolor{Base}
+\colorlet{name}{Text}
+\colorlet{tagline}{Blue}
+\colorlet{heading}{Blue}
+\colorlet{headingrule}{Blue}
+\colorlet{subheading}{Lavender}
+\colorlet{accent}{Blue}
+\colorlet{emphasis}{Text}
+\colorlet{body}{Subtext1}
 
-% Change the colours if you want to
-\definecolor{Mulberry}{HTML}{355873}
-\definecolor{SlateGrey}{HTML}{2E2E2E}
-\definecolor{LightGrey}{HTML}{666666}
-\colorlet{heading}{Mulberry}
-\colorlet{accent}{Mulberry}
-\colorlet{emphasis}{SlateGrey}
-\colorlet{body}{LightGrey}
+% Change some fonts, if necessary
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\footnotesize}
+\renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
 
 % Change the bullets for itemize and rating marker
 % for \cvskill if you want to
-\renewcommand{\itemmarker}{{\small\textbullet}}
-\renewcommand{\ratingmarker}{\faCircle}
+\renewcommand{\cvItemMarker}{{\small\textbullet}}
+\renewcommand{\cvRatingMarker}{\faCircle}
+% ...and the markers for the date/location for \cvevent
+% \renewcommand{\cvDateMarker}{\faCalendar*[regular]}
+% \renewcommand{\cvLocationMarker}{\faMapMarker*}
+
+
+% If your CV/résumé is in a language other than English,
+% then you probably want to change these so that when you
+% copy-paste from the PDF or run pdftotext, the location
+% and date marker icons for \cvevent will paste as correct
+% translations. For example Spanish:
+% \renewcommand{\locationname}{Ubicación}
+% \renewcommand{\datename}{Fecha}
+
+
+%% Use (and optionally edit if necessary) this .tex if you
+%% want to use an author-year reference style like APA(6)
+%% for your publication list
+% \input{pubs-authoryear.cfg}
+
+%% Use (and optionally edit if necessary) this .tex if you
+%% want an originally numerical reference style like IEEE
+%% for your publication list
+\input{pubs-num.cfg}
 
 %% sample.bib contains your publications
-% \addbibresource{sample.bib}
+\addbibresource{sample.bib}
 
 \begin{document}
 \name{Jeshua Lin}
 \tagline{Network and Cloud Infrastructure Solutions Architect}
-% \photo{2.8cm}{Globe_High}
+%% You can add multiple photos on the left or right
+% \photoR{2.8cm}{Globe_High}
+% \photoL{2.5cm}{Yacht_High,Suitcase_High}
+
 \personalinfo{%
   % Not all of these are required!
-  % You can add your own with \printinfo{symbol}{detail}
-  % \homepage{\href{https://www.jesl.in/}{jesl.in}}
-  \linkedin{\href{https://www.linkedin.com/in/jeshua-lin/}{linkedin.com/in/jeshua-lin}}
-  \github{\href{https://github.com/jeslinmx/}{github.com/jeslinmx}}
-  \email{\href{mailto:jeslinmx@gmail.com}{jeslinmx@gmail.com}}
-  % \email{mxl19@imperial.ac.uk}
-  % \phone{+65 9663 2384}
-  % \printinfo{\faBirthdayCake}{18th Feb 1996}
-  % \printinfo{\faCalendarPlusO}{Internship availability: May - July 2020}
-  % \phone{+44 7923 835402}
-  % \mailaddress{Address, Street, 00000 County}
-  % \location{Location, COUNTRY}
+  \homepage{jesl.in}
+  \linkedin{jeshua-lin}
+  \github{jeslinmx}
+  \email{jeslinmx@gmail.com}
+  % \phone{000-00-0000}
+  % \mailaddress{Åddrésş, Street, 00000 Cóuntry}
+  % \location{Singapore, Singapore}
   % \twitter{@twitterhandle}
-  %% You MUST add the academicons option to \documentclass, then compile with LuaLaTeX or XeLaTeX, if you want to use \orcid or other academicons commands.
-  % \orcid{orcid.org/0000-0000-0000-0000}
+  % \orcid{0000-0000-0000-0000}
+  %% You can add your own arbitrary detail with
+  %% \printinfo{symbol}{detail}[optional hyperlink prefix]
+  % \printinfo{\faPaw}{Hey ho!}[https://example.com/]
+  %% Or you can declare your own field with
+  %% \NewInfoFiled{fieldname}{symbol}[optional hyperlink prefix] and use it:
+  % \NewInfoField{gitlab}{\faGitlab}[https://gitlab.com/]
+  % \gitlab{your_id}
+  %%
+  %% For services and platforms like Mastodon where there isn't a
+  %% straightforward relation between the user ID/nickname and the hyperlink,
+  %% you can use \printinfo directly e.g.
+  % \printinfo{\faMastodon}{@username@instace}[https://instance.url/@username]
+  %% But if you absolutely want to create new dedicated info fields for
+  %% such platforms, then use \NewInfoField* with a star:
+  % \NewInfoField*{mastodon}{\faMastodon}
+  %% then you can use \mastodon, with TWO arguments where the 2nd argument is
+  %% the full hyperlink.
+  % \mastodon{@username@instance}{https://instance.url/@username}
 }
 
-%% Make the header extend all the way to the right, if you want.
-\begin{fullwidth}
 \makecvheader
-\end{fullwidth}
-
 \bigskip
-
 %% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
 % \AtBeginEnvironment{itemize}{\small}
 
-%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
-%% You can always just use \marginpar{...} if you do
-%% not need to align the top of the contents to any
-%% \cvsection title in the "main" bar.
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.6}
 
-% \cvsidebar[sample-p1sidebar]
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
 
-% \begin{quote}
+\cvsection{Experience}
 
-% Throughout my entire life, I have been passionate about programming as a means of problem solving. 
-
-% \end{quote}
-
-\cvsection[sample-p1sidebar]{Experience}
-
-\cvevent{Quantum Network Solutions Engineer/IT Manager}{\href{https://speqtral.space}{SpeQtral}}{Jan 2022 - current}{Singapore}
-\cvevent{Software Engineering Intern}{}{May 2021 - September 2021}{}
+\cvevent{Quantum Network Solutions Engineer/IT Manager}
+  {\href{https://speqtral.space}{SpeQtral}}
+  {Jan 2022 -- present}{Singapore}
+\cvevent{Software Engineering Intern}
+  {}{May 2021 -- September 2021}{}
 \begin{itemize}
 \item Architecturing and deploying quantum key distribution solutions to fortify on-premises, datacentre, and cloud workloads for the post-quantum age.
 \item Maintaining and managing corporate internal IT infrastructure and resources.
@@ -130,7 +161,9 @@
 
 \divider
 
-\cvevent{Fluid Dynamics Intern}{Dyson (Research, Design and Development - Fluid Dynamics)}{May 2020 - July 2020}{Singapore}
+\cvevent{Fluid Dynamics Intern}
+  {\href{https://careers.dyson.com/en-gb/what-you-can-do/engineer/research/}{Dyson (Research, Design and Development - Fluid Dynamics)}}
+  {May 2020 -- July 2020}{Singapore}
 \begin{itemize}
 \item Created tooling to complement and automate the team's existing Fluent CFD workflow (meshing, setup, solving, and postprocessing).
 \item Produced potential time savings of over 50 man-hours per design optimization study through automation.
@@ -138,22 +171,28 @@
 
 \divider
 
-\cvevent{Research Intern}{\href{https://www.ost.ch/de/forschung-und-dienstleistungen/technik/erneuerbare-energien-und-umwelttechnik/iet-institut-fuer-energietechnik}{Institut für Energietechnik, Hochschule für Technik Rapperswil}}{July 2019 - September 2019}{Switzerland}
+\cvevent{Research Intern}
+  {\href{https://www.ost.ch/de/forschung-und-dienstleistungen/technik/erneuerbare-energien-und-umwelttechnik/iet-institut-fuer-energietechnik}{Institut für Energietechnik, Hochschule für Technik Rapperswil}}
+  {July 2019 -- September 2019}{Switzerland}
 \begin{itemize}
 \item Developed computer-aided geometry optimization workflows for the lift generating component of an airborne wind turbine in collaboration with an industrial partner.
 \end{itemize}
 
 % \divider
 
-% \cvevent{Armoured Infantry Vehicle Commander}{Singapore Armed Forces}{December 2014 - December 2016}{Singapore}
+% \cvevent{Armoured Infantry Vehicle Commander}
+%   {Singapore Armed Forces}{December 2014 -- December 2016}
+%   {Singapore}
 % \begin{itemize}
-% \item Exercised command over a section of 8 soldiers and an armoured personnel carrier in the field, as well as taking responsibility for their welfare within the barracks.
+% \item Exercised command over an armoured personnel carrier and a section of 8 soldiers in the field, as well as taking responsibility for their welfare within the barracks.
 % \item Managed the administrative matters of a company of over a hundred soldiers, working closely with higher command to keep the combat team running smoothly.
 % \end{itemize}
 
 % \divider
 
-% \cvevent{High School Intern}{Infocomm Development Authority of Singapore}{July 2012 - August 2012}{Singapore}
+% \cvevent{High School Intern}
+%   {Infocomm Development Authority of Singapore}
+%   {July 2012 -- August 2012}{Singapore}
 % \begin{itemize}
 % \item Conducted a nationwide feasibility study into online education initiatives as part of a group internship project over 4 weeks.
 % \end{itemize}
@@ -162,9 +201,12 @@
 
 \cvsection{Education}
 
-\cvevent{B.Eng. (Hons) in Aerospace Engineering (REP),\\
-MSc. in Technology Management}{\href{https://www.ntu.edu.sg/education/undergraduate-programme/renaissance-engineering-programme-(rep)}{Nanyang Technological University}}{August 2017 - December 2021}{Singapore}
-% \cvevent{}{Imperial College London (exchange)}{October 2019 - May 2020}{United Kingdom}
+\cvevent{B.Eng. (Hons) in Aerospace Engineering (REP),\linebreak MSc. in Technology Management}
+  {\href{https://www.ntu.edu.sg/education/undergraduate-programme/renaissance-engineering-programme-(rep)}{Nanyang Technological University}}
+  {August 2017 -- December 2021}{Singapore}
+% \cvevent{}
+%   {Imperial College London (exchange)}
+%   {October 2019 - May 2020}{United Kingdom}
 \begin{itemize}
   \item The Renaissance Engineering Programme (REP) is a 4½ year dual-degree programme in engineering and business.
   % \item Graduated with cGPA of 4.79/5
@@ -172,32 +214,9 @@ MSc. in Technology Management}{\href{https://www.ntu.edu.sg/education/undergradu
 
 % \divider
 
-% \cvevent{GCE 'A' Levels}{Raffles Institution}{January 2009 - December 2014}{Singapore}
-
-\medskip
-
-% \cvevent{}{Modules taken/currently studying (non-exhaustive):}{}{}
-
-% \cvtag{Aerodynamics}
-% \cvtag{Computational Fluid Dynamics}
-% \cvtag{Control Systems}
-% \cvtag{Finite Elements}
-% \cvtag{Fluid Mechanics}
-% \cvtag{Heat Transfer}
-
-% \cvsection{Active Projects}
-
-% \cvevent{Non-invasive condition monitoring of aircraft gearboxes}{Renaissance Capstone Project (FYP)}{November 2020 - March 2021 (ongoing)}{}
-% Implemented random convolutional kernel-based classifier algorithms in both Python and CUDA, for detecting various fault conditions in real-time through time-series analysis of vibration and current sensor data from an online system. \\
-% \medskip
-% \cvtag{Machine Learning} \cvtag{Signal Processing}
-
-% \divider
-
-% \cvevent{Data Science Specialization with John Hopkins University}{Massive Open Online Course (Coursera)}{November 2020 onwards (ongoing)}{}
-% An online course spanning the range of introductory topics in data science, including statistics, data processing and cleaning, programming in R, visualization, and drawing conclusions. \\
-% \medskip
-% \cvtag{Data Science} \cvtag{Machine Learning} \cvtag{R}
+% \cvevent{GCE 'A' Levels}
+%   {Raffles Institution}
+%   {January 2009 - December 2014}{Singapore}
 
 % \medskip
 
@@ -214,8 +233,20 @@ MSc. in Technology Management}{\href{https://www.ntu.edu.sg/education/undergradu
 %   5/6em/accent!20/Spending time with family
 % }
 
-% \clearpage
-% \cvsection[page2sidebar]{Publications}
+% use ONLY \newpage if you want to force a page break for
+% ONLY the current column
+% \newpage
+
+% \cvsection{Publications}
+
+% %% Specify your last name(s) and first name(s) as given in the .bib to automatically bold your own name in the publications list.
+% %% One caveat: You need to write \bibnamedelima where there's a space in your name for this to work properly; or write \bibnamedelimi if you use initials in the .bib
+% %% You can specify multiple names, especially if you have changed your name or if you need to highlight multiple authors.
+% \mynames{Lim/Lian\bibnamedelima Tze,
+%   Wong/Lian\bibnamedelima Tze,
+%   Lim/Tracy,
+%   Lim/L.\bibnamedelimi T.}
+% %% MAKE SURE THERE IS NO SPACE AFTER THE FINAL NAME IN YOUR \mynames LIST
 
 % \nocite{*}
 
@@ -223,18 +254,125 @@ MSc. in Technology Management}{\href{https://www.ntu.edu.sg/education/undergradu
 
 % \divider
 
-% \printbibliography[heading=pubtype,title={\printinfo{\faFileTextO}{Journal Articles}},type=article]
+% \printbibliography[heading=pubtype,title={\printinfo{\faFile*[regular]}{Journal Articles}},type=article]
 
 % \divider
 
-% \printbibliography[heading=pubtype,title={\printinfo{\faGroup}{Conference Proceedings}},type=inproceedings]
+% \printbibliography[heading=pubtype,title={\printinfo{\faUsers}{Conference Proceedings}},type=inproceedings]
 
-%% If the NEXT page doesn't start with a \cvsection but you'd
-%% still like to add a sidebar, then use this command on THIS
-%% page to add it. The optional argument lets you pull up the
-%% sidebar a bit so that it looks aligned with the top of the
-%% main column.
-% \addnextpagesidebar[-1ex]{page3sidebar}
+%% Switch to the right column. This will now automatically move to the second
+%% page if the content is too long.
+\switchcolumn
+
+% \cvsection{My Life Philosophy}
+
+% \begin{quote}
+% ``Something smart or heartfelt, preferably in one sentence.''
+% \end{quote}
+
+\cvsection{Skills}
+
+\cvachievement{\faCloud}{Cloud Infrastructure}
+{\href{https://www.credly.com/badges/4ec2308e-10f8-4c2d-adb9-f37b8f3c31d0}{\cvtag{\textcolor{Peach}{\faCertificate}AWS Certified Cloud Practitioner} }\cvtag{Cloudflare} \cvtag{Terraform}}
+\divider
+
+\cvachievement{\faServer}{System Administration}
+{\cvtag{Linux} \cvtag{Docker} \cvtag{Proxmox} \cvtag{Nix}}
+\divider
+
+\cvachievement{\faCode}{Programming}
+{\cvtag{Python} \cvtag{Javascript/TypeScript} \cvtag{Svelte} \cvtag{React}}
+\divider
+
+\cvachievement{\faBriefcase}{Organizational IT}
+{\cvtag{Microsoft 365, AAD, Intune} \cvtag{Windows deployment} \cvtag{Network and Wi-Fi management}}
+\divider
+
+\cvachievement{\faObjectGroup}{Graphic Design}
+{\cvtag{Figma} \cvtag{Canva} \cvtag{Inkscape} \cvtag{GIMP} \cvtag{Blender}}
+
+% \cvachievement{\faCube}{CAD/CAE}{ANSYS Fluent, STAR-CCM+, Siemens NX, SolidWorks, OnShape}
+% \divider
+
+% \cvachievement{\faCogs}{Hardware}{3D printing, laser cutting, Arduino}
+% \divider
+
+\medskip
+
+\cvsection{Awards}
+
+\cvachievement{\textcolor{Subtext0}{\faTrophy}}{\href{https://careers.shopee.sg/productdesign2021/}{Shopee Product \& Design Challenge}}{First Runners-up (2021)}
+
+\divider
+
+\cvachievement{\textcolor{Yellow}{\faTrophy}}{\href{https://www.shell.com.sg/energy-and-innovation/imagine-the-future-competition/previous-editions/2018-2019.html}{Shell Imagine the Future}}{National Champions, Regional Runners-up (2018/19)}
+
+\divider
+
+\cvachievement{\textcolor{Rosewater}{\faTrophy}}{National Olympiad of Informatics}{Bronze Medallist (2011)}
+
+\divider
+
+\cvachievement{\textcolor{Subtext0}{\faTrophy}}{S'pore Games Creation Competition}{Best Technical Achievement (2011)}
+
+\medskip
+
+\cvsection{Side Projects}
+
+% \cvachievement{\faTrello}{\href{https://www.jesl.in/yakboard/}{yakboard} \href{https://github.com/jeslinmx/yakboard}{\faGithub}}{Yet another kanban board, a project to teach myself React.}
+
+% \divider
+
+\cvachievement{\faBullhorn}{\href{https://t.me/theDailyTelegram_bot}{The Daily Telegram} \href{https://github.com/jeslinmx/dailytelegram}{\faGithub}}{A Telegram bot which provides a daily digest of subscribed RSS feeds.}
+
+\divider
+
+\cvachievement{\faMagic}{\href{https://t.me/zhngbot}{@zhngbot} \href{https://github.com/jeslinmx/zhngbot}{\faGithub}}{A simple text-transforming Telegram inline bot to spice up your messages.}
+
+\divider
+
+% \cvachievement{\faStar}{\href{https://github.com/jeslinmx/advent2020}{Advent of Code 2020 \faGithub}}{A yearly coding challenge taking place from 1-25 December. Achieved 44/50 stars.}
+
+% \cvsection{Strengths}
+
+% \cvtag{Hard-working}
+% \cvtag{Eye for detail}\\
+% \cvtag{Motivator \& Leader}
+
+% \divider\smallskip
+
+% \cvtag{C++}
+% \cvtag{Embedded Systems}\\
+% \cvtag{Statistical Analysis}
+
+% \cvsection{Languages}
+
+% \cvskill{English}{5}
+% \divider
+
+% \cvskill{Spanish}{4}
+% \divider
+
+% \cvskill{German}{3.5} %% Supports X.5 values.
+
+%% Yeah I didn't spend too much time making all the
+%% spacing consistent... sorry. Use \smallskip, \medskip,
+%% \bigskip, \vspace etc to make adjustments.
+% \medskip
+
+% \cvsection{Referees}
+
+% \cvref{name}{email}{mailing address}
+% \cvref{Prof.\ Alpha Beta}{Institute}{a.beta@university.edu}
+% {Address Line 1\\Address line 2}
+
+% \divider
+
+% \cvref{Prof.\ Gamma Delta}{Institute}{g.delta@university.edu}
+% {Address Line 1\\Address line 2}
+
+
+\end{paracol}
 
 
 \end{document}
