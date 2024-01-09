@@ -35,7 +35,7 @@
 % xelatex -shell-escape -output-driver="xdvipdfmx -z 0" sample.tex
 \ifxetexorluatex
   % If using xelatex or lualatex:
-  \setmainfont{Roboto Slab}
+  \setmainfont{Lato}
   \setsansfont{Lato}
   \renewcommand{\familydefault}{\sfdefault}
 \else
@@ -104,9 +104,9 @@
 
 \personalinfo{%
   % Not all of these are required!
-  \homepage{jesl.in}
   \linkedin{jeshua-lin}
   \github{jeslinmx}
+  % \homepage{jesl.in}
   \email{jeslinmx@gmail.com}
   % \phone{000-00-0000}
   % \mailaddress{Åddrésş, Street, 00000 Cóuntry}
@@ -153,10 +153,10 @@
 \cvevent{Software Engineering Intern}
   {}{May 2021 -- September 2021}{}
 \begin{itemize}
-\item Architecturing and deploying quantum key distribution solutions to fortify on-premises, datacentre, and cloud workloads for the post-quantum age.
-\item Maintaining and managing corporate internal IT infrastructure and resources.
+\item Architecturing and deploying quantum key distribution solutions to fortify on-premises, datacentre, and cloud infrastructure for the post-quantum age.
+\item Maintaining and managing internal corporate IT infrastructure and resources.
 \item Developed, maintained, and improved internal QKD modelling and orbit analysis tools for satellite constellation benchmarking.
-\item Supported cross-functional teams in conducting mission design studies, deploying cloud infrastructure and continuous integration workflows.
+\item Supported cross-functional teams in conducting mission design studies, deploying cloud resources and continuous integration workflows.
 \end{itemize}
 
 \divider
@@ -272,24 +272,40 @@
 
 \cvsection{Skills}
 
-\cvachievement{\faCloud}{Cloud Infrastructure}
-{\href{https://www.credly.com/badges/4ec2308e-10f8-4c2d-adb9-f37b8f3c31d0}{\cvtag{\textcolor{Peach}{\faCertificate}AWS Certified Cloud Practitioner} }\cvtag{Cloudflare} \cvtag{Terraform}}
+\cvachievement{\faCloud}{Cloud Infrastructure} {
+  \href{https://www.credly.com/badges/4ec2308e-10f8-4c2d-adb9-f37b8f3c31d0}{\cvtag{\textcolor{Peach}{\faCertificate}AWS Certified Cloud Practitioner}}
+  \cvtag{Cloudflare}
+  \cvtag{Terraform}
+}
 \divider
 
-\cvachievement{\faServer}{System Administration}
-{\cvtag{Linux} \cvtag{Docker} \cvtag{Proxmox} \cvtag{Nix}}
+\cvachievement{\faServer}{System Administration} {
+  \href{https://github.com/jeslinmx/dotfiles}{\cvtag{\faGithub Linux}}
+  \href{https://github.com/jeslinmx/nix}{\cvtag{\faGithub Nix}}
+  \cvtag{Docker}
+  \cvtag{Proxmox}
+}
 \divider
 
-\cvachievement{\faCode}{Programming}
-{\cvtag{Python} \cvtag{Javascript/TypeScript} \cvtag{Svelte} \cvtag{React}}
+\cvachievement{\faCode}{Programming} {
+  \cvtag{Python}
+  \cvtag{Javascript}
+  \cvtag{Svelte}
+}
 \divider
 
-\cvachievement{\faBriefcase}{Organizational IT}
-{\cvtag{Microsoft 365, AAD, Intune} \cvtag{Windows deployment} \cvtag{Network and Wi-Fi management}}
+\cvachievement{\faBriefcase}{Organizational IT} {
+  \cvtag{Microsoft 365, AAD, Intune}
+  \cvtag{Windows deployment}
+  \cvtag{Office network management}
+}
 \divider
 
-\cvachievement{\faObjectGroup}{Graphic Design}
-{\cvtag{Figma} \cvtag{Canva} \cvtag{Inkscape} \cvtag{GIMP} \cvtag{Blender}}
+\cvachievement{\faObjectGroup}{Graphic Design} {
+  \cvtag{Figma}
+  \cvtag{Canva}
+  \cvtag{Inkscape}
+}
 
 % \cvachievement{\faCube}{CAD/CAE}{ANSYS Fluent, STAR-CCM+, Siemens NX, SolidWorks, OnShape}
 % \divider
