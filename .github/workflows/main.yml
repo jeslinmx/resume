@@ -9,12 +9,15 @@ jobs:
     permissions:
       contents: write
     steps:
-    - uses: actions/checkout@v4
+    - name: Checkout repository
+      uses: actions/checkout@v4
       with:
         submodules: true
-    - uses: docker://texlive/texlive:latest
+    - name: Compile with TeXLive
+      uses: docker://texlive/texlive:latest
       with:
         entrypoint: latexmk
-    - uses: svenstaro/upload-release-action@v2
+    - name: Upload to release
+      uses: svenstaro/upload-release-action@v2
       with:
         file: resume.pdf
