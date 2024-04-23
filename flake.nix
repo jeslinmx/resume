@@ -15,7 +15,7 @@
         devShell =
           with pkgs;
           mkShell { buildInputs = [
-            lato texlive.combined.scheme-full
+            lato texlive.combined.scheme-full just zathura
           ];
         };
       }
