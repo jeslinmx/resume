@@ -5,7 +5,7 @@
 #let template(
   name,
   blurb,
-  sidebar-width: 30%,
+  sidebar-width: 25%,
   accent_color: rgb("#1e66f5"),
   top-right,
   bottom-left,
@@ -43,13 +43,14 @@
     block(above: 0em, below: 1.5em, text(fill: luma(0), weight: 600, it.body))
   }
   show heading.where(level: 4): it => block(text(weight: 600, it.body))
+  show emph: set text(weight: 600)
   show strong: set text(accent_color)
   show quote.where(block: true): it => block(
     width: 100%,
     text(
       fill: luma(0),
       font: "DM Serif Display",
-      size: 2em,
+      size: 1.7em,
       par(leading: 0.65em, it.body)
     )
   )
@@ -59,7 +60,7 @@
     column-gutter: 2.5em,
     row-gutter: 4em,
     [
-      = #name
+      = #text(size: 2em, weight: 200, name)
       #quote(blurb, block: true)
     ],
     top-right,
@@ -98,7 +99,7 @@
   end: "Current",
   description: [],
 ) = context {
-  grid(
+  box(grid(
     columns: (4em, 1fr),
     column-gutter: 1em,
     align: (x, y) => {
@@ -114,8 +115,8 @@
       #set text(fill: luma(100))
       #set par(leading: 0.65em)
 
-      #start
       #end
+      #start
     ],
     [
       #text(weight: 500,
@@ -129,7 +130,7 @@
 
       #description
     ]
-  )
+  ))
 }
 
 #let taglist(..tags) = {

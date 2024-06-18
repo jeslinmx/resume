@@ -6,25 +6,34 @@
   [
     I'm a *network engineer* and a fast learner with a thirst for broadening and deepening my knowledge and skills.\ I thrive on solving challenging problems with real impact.
   ],
-  info(
-    email: "jeslinmx@gmail.com",
-    phone: "+65 9663 2384",
-    location: "Singapore",
-    linkedin: "jeshua-lin",
-    github: "jeslinmx"
-  ),
+  {
+    box(radius: 100%, clip: true, image("me.jpg"))
+    info(
+      email: "jeslinmx@gmail.com",
+      phone: "+65 9663 2384",
+      linkedin: "jeshua-lin",
+      github: "jeslinmx",
+      location: "Singapore",
+    )
+  },
   [
     = Experience
     #role(
-      "Network Engineer / IT Manager",
+      "Network Engineer & IT Manager",
       link("https://speqtralquantum.com/", "SpeQtral"),
       location: "Singapore",
       start: "Jan 2022",
       end: "Current",
       description: [
-        Architecturing and spearheading the deployment of a state-of-the-art nationwide quantum key distribution (QKD) network.
+        Spearheading the deployment of a state-of-the-art standards-compliant nationwide _quantum key distribution (QKD)_ network.
 
-        Provisioning and managing cloud and on-prem resources and CI/CD workflows, facilitating more productive development cycles across the whole organization.
+        Developing and deploying proof-of-concept applications in _Svelte_ and _Python_ demonstrating the practical use of QKD for quantum-secure communication.
+
+        Implementing and managing _CI/CD_ workflows across the whole organisation, facilitating more agile development within and between various functional teams.
+
+        Managing AWS accounts; Microsoft 365 services; endpoints (Intune); secure identity and access (Entra); zero trust networking (Cloudflare Access); SSO and SCIM; on-premises servers, hypervisors (Proxmox VE), networking and printing.
+
+        Providing technical onboarding, support, troubleshooting and training to staff.
       ]
     )
 
@@ -35,44 +44,55 @@
       start: "May 2021",
       end: "Sep 2021",
       description: [
-        Developed internal QKD models and orbit analysis tools for satellite constellation design.
+        Developed mathematical QKD models, orbital dynamics simulations and statistical analysis tools, using the _SciPy_ and _PyData_ stacks.
+
+        Integrated the above components into an in-house satellite constellation design stack tailored for the company's use cases, eliminating the need for costly third-party alternatives.
       ]
     )
 
     #role(
-      "Research Intern (Fluid Dynamics)",
+      "Fluid Dynamics Simulation Intern",
       link("https://careers.dyson.com/en-gb/what-you-can-do/engineer/research/", "Dyson"),
       location: "Singapore",
       start: "May 2020",
       end: "Jul 2020",
       description: [
-        Automated the fluid dynamics team’s existing CFD workflow, saving over 50 man-hours per design optimization study.
+        Automated the fluid dynamics team’s existing _computational fluid dynamics (CFD)_ workflow, saving up to 50 man-hours per design optimization study.
       ]
     )
 
     #role(
       "Research Intern",
-      link("https://www.ost.ch/de/forschung-und-dienstleistungen/technik/erneuerbare-energien-und-umwelttechnik/iet-institut-fuer-energietechnik", "Institut für Energietechnik"),
+      link("https://www.ost.ch/en/research-and-consulting-services/technology/renewable-energies-and-environmental-engineering/iet-institute-for-energy-technology", "Institut für Energietechnik"),
       location: "Switzerland",
       start: "Jul 2019",
       end: "Sep 2019",
       description: [
-        Developed computer-aided geometry optimization workflows with industrial applications in wind energy generation and rail transportation.
+        Designed computer-aided geometry optimization workflows with industrial applications in wind energy generation and rail transportation.
       ]
     )
 
     = Education
 
-    === MSc (Technology Management) & BEng (Aerospace Engineering)
-    #link("https://www.ntu.edu.sg/education/undergraduate-programme/renaissance-engineering-programme-(rep)", "Nanyang Technological University")\
-    Aug 2017 -- Dec 2021
+    === Master of Science in Technology Management
+    #link("https://www.ntu.edu.sg/education/undergraduate-programme/renaissance-engineering-programme-(rep)", "Nanyang Technological University, Singapore")\
+    Dec 2020 -- Dec 2021
+
+    === Bachelor of Engineering Science (Aerospace Engineering)
+    #link("https://www.ntu.edu.sg/education/undergraduate-programme/renaissance-engineering-programme-(rep)", "Nanyang Technological University, Singapore")\
+    Aug 2017 -- Dec 2020
 
   ],
   [
     = Certifications
 
-    === AWS Certified Cloud Practitioner
+    === #link("https://www.credly.com/badges/4ec2308e-10f8-4c2d-adb9-f37b8f3c31d0", "Amazon Web Services Certified Cloud Practitioner")
     September 2023
+
+    #text(fill: luma(120))[
+      === Cisco Certified Network Associate (ongoing)
+      August 2024 (targeted)
+    ]
 
     = Skills
 
@@ -80,29 +100,18 @@
     #taglist(
       [ 󰸏 AWS ],
       [ #fa-cloudflare() Cloudflare ],
-      [ 󱁢 Terraform ]
-    )
-
-    === Linux System Administration
-    #taglist(
-      [  NixOS ],
+      [ 󱁢 Terraform ],
       [ 󰡨 Docker ],
-      [ Proxmox Virtual Environment ]
     )
 
-    === Programming and Scripting
+    === Programming
     #taglist(
-      [ 󰌠 Python ],
-      [ 󱄅 Nix ],
-      [ 󱆃 Bash ],
       [ 󰌞 Javascript ],
-      [  Svelte ]
-    )
-
-    === Organisational IT
-    #taglist(
-      [ 󰏆 Microsoft 365, Entra, Intune ],
-      [ 󰒍 SOHO network management ],
+      [  Svelte ],
+      [ 󰌠 Python ],
+      [ 󰢱 Lua ],
+      [ 󱆃 Bash ],
+      [ 󱄅 Nix ],
     )
 
     === Graphic Design
