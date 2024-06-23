@@ -1,4 +1,4 @@
-#import "template.typ": template, role, info, taglist
+#import "templates/resume.typ": template, role, info, taglist
 #import "@preview/fontawesome:0.2.0": *
 
 #template(
@@ -7,7 +7,7 @@
     I'm a *network engineer* and a fast learner with a thirst for broadening and deepening my knowledge and skills.\ I thrive on solving challenging problems with real impact.
   ],
   {
-    box(radius: 100%, clip: true, image("me.jpg"))
+    box(radius: 100%, clip: true, image("assets/me.jpg"))
     info(
       email: "jeslinmx@gmail.com",
       phone: "+65 9663 2384",
