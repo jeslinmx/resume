@@ -6,10 +6,17 @@
     flake-utils.url = "github:numtide/flake-utils";
   };
 
-  outputs = { self, flake-utils, devshell, nixpkgs, ... }:
-    flake-utils.lib.eachDefaultSystem (system: {
+  outputs = { self, flake-utils, devshell, nixpkgs, ... } @ inputs:
+    flake-utils.lib.eachDefaultSystem (system: let
+      pkgs = import nixpkgs { inherit system; };
+      typst-font-paths = builtins.concatStringsSep ":" [
+        self.packages.${system}.static-fonts
+        pkgs.font-awesome
+        (pkgs.nerdfonts.override { fonts = ["NerdFontsSymbolsOnly"]; })
+        pkgs.google-fonts
+      ];
+    in {
       packages.static-fonts = let
-        pkgs = import nixpkgs { inherit system; };
         targetFonts = {
           Assistant = "ExtraLight";
         };
@@ -25,8 +32,7 @@
           Black = "900";
         };
       in pkgs.stdenv.mkDerivation {
-        pname = "static-fonts";
-        version = "1.0.0";
+        name = "static-fonts";
         src = pkgs.google-fonts;
         buildInputs = with pkgs; [ python312Packages.fonttools ];
         buildPhase = with nixpkgs.lib; concatStringsSep "\n" ( attrValues ( mapAttrs (
@@ -54,23 +60,18 @@
         in
         pkgs.devshell.mkShell {
           commands = [
-            {
-              name = "develop";
-              help = "begin live compilation and previewing of resume.typ";
-              command = "${pkgs.typst}/bin/typst watch --open ${pkgs.zathura}/bin/zathura resume.typ";
-            }
             { package = pkgs.typst; }
+            {
+              name = "watch";
+              help = "begin live typst compilation and previewing";
+              command = "${pkgs.typst}/bin/typst watch --open ${pkgs.zathura}/bin/zathura $@";
+            }
           ];
           devshell.packages = [ pkgs.typst-lsp ];
           env = [
             {
               name = "TYPST_FONT_PATHS";
-              prefix = ''
-                ${self.packages.${system}.static-fonts}:\
-                ${pkgs.font-awesome}:\
-                ${pkgs.nerdfonts.override { fonts = ["NerdFontsSymbolsOnly"]; }}:\
-                ${pkgs.google-fonts}
-              '';
+              value = typst-font-paths;
             }
           ];
         };
