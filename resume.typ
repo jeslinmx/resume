@@ -27,13 +27,13 @@
       description: [
         Spearheading the deployment of a state-of-the-art standards-compliant nationwide _quantum key distribution (QKD)_ network.
 
-        Developing and deploying proof-of-concept applications in _Svelte_ and _Python_ demonstrating the practical use of QKD for quantum-secure communication.
+        Developing and deploying proof-of-concept applications in _Svelte_ and _Python_ demonstrating the practical use of QKD for quantum-secure communication in a cloud environment.
 
         Implementing and managing _CI/CD_ workflows across the whole organisation, facilitating more agile development within and between various functional teams.
 
         Managing AWS accounts; Microsoft 365 services; endpoints (Intune); secure identity and access (Entra); zero trust networking (Cloudflare Access); SSO and SCIM; on-premises servers, hypervisors (Proxmox VE), networking and printing.
 
-        Providing technical onboarding, support, troubleshooting and training to staff.
+        Conducting technical onboarding, support, troubleshooting and training for staff.
       ]
     )
 
