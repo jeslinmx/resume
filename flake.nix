@@ -64,7 +64,7 @@
             {
               name = "watch";
               help = "begin live typst compilation and previewing";
-              command = "${pkgs.typst}/bin/typst watch --open ${pkgs.zathura}/bin/zathura $@";
+              command = "${pkgs.typst}/bin/typst watch --open ${pkgs.zathura}/bin/zathura \"$@\"";
             }
           ];
           devshell.packages = [ pkgs.typst-lsp ];
