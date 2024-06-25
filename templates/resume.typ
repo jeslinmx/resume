@@ -6,7 +6,7 @@
   name,
   blurb,
   sidebar-width: 25%,
-  accent_color: rgb("#1e66f5"),
+  accent-colour: rgb("#1e66f5"),
   top-right,
   bottom-left,
   bottom-right
@@ -36,7 +36,7 @@
   set par(
     leading: 0.75em
   )
-  accent.update(accent_color)
+  accent.update(accent-colour)
 
   show heading.where(level: 1): it => {
     block(above: 1em, below: 1em, line(length: 100%, stroke: 1pt + luma(200)))
@@ -44,7 +44,7 @@
   }
   show heading.where(level: 4): it => block(text(weight: 600, it.body))
   show emph: set text(weight: 600)
-  show strong: set text(accent_color)
+  show strong: set text(accent-colour)
   show quote.where(block: true): it => block(
     width: 100%,
     text(
@@ -54,6 +54,11 @@
       par(leading: 0.65em, it.body)
     )
   )
+  show link: it => {
+    it
+    sym.space.nobreak
+    super(text(fill: luma(180), ""))
+  }
 
   grid(
     columns: (1fr, sidebar-width),
@@ -91,46 +96,37 @@
   )
 }
 
-#let role(
-  title,
-  company,
+#let milestone(
+  ..titles-and-dates,
+  organisation: "",
   location: "",
-  start: "",
-  end: "Current",
-  description: [],
+  accent-colour: auto,
+  content
 ) = context {
-  box(grid(
-    columns: (4em, 1fr),
-    column-gutter: 1em,
-    align: (x, y) => {
-      (if x == 0 { right } else { left }) + (if y == 0 { horizon } else { top })
-    },
-    row-gutter: 0.8em,
-    line(length: 100%, stroke: 4pt + accent.get()),
-    [
-      #set text(fill: accent.get())
-      == #smallcaps(title)
-    ],
-    [
-      #set text(fill: luma(100))
-      #set par(leading: 0.65em)
+  let bar-margin = 0.6em
+  let bar-thickness = 3pt
+  let accent-colour = if accent-colour == auto { accent.get() } else { accent-colour }
+  block(above: 2em, breakable: false, [
+    #grid(
+      columns: (1fr, auto),
+      column-gutter: (1em),
+      align: (left, right),
+      row-gutter: 0.8em,
+      ..titles-and-dates.pos().map(x =>
+        ((title, start, end) => (
+          grid.cell(inset: (left: -bar-margin - bar-thickness / 2), heading(level: 2, {
+            box(inset: (right: bar-margin), line(length: 0.75em, angle: 90deg, stroke: bar-thickness + accent-colour))
+            smallcaps(text(fill: accent-colour, title))
+          })),
+          [ #start -- #end ],
+        ))(..x)
+      ).flatten(),
+      text(weight: 500, organisation),
+      text(weight: 500, location)
+    )
 
-      #end
-      #start
-    ],
-    [
-      #text(weight: 500,
-        grid(
-          columns: (1fr, auto),
-          align: (left, right),
-          company,
-          location
-        )
-      )
-
-      #description
-    ]
-  ))
+    #content
+  ])
 }
 
 #let taglist(..tags) = {
