@@ -4,7 +4,7 @@
 #template(
   "Jeshua Lin",
   [
-    Highly skilled budding IT professional with experience in *network administration*, *cloud infrastructure*, and *security*.\ I am a self-motivated *fast learner* and an independent *problem solver*, with a proven track record of managing and deploying complex IT projects with real impact.
+    I am a *fast, self-motivated learner* and an *independent problem solver*, with a proven track record of taking on complex projects beyond my comfort zone and delivering, no matter what it takes.
   ],
   {
     box(radius: 100%, clip: true, image("assets/me.jpg"))
@@ -27,15 +27,13 @@
     )[
       #link("https://speqtralquantum.com/newsroom/speqtral-and-toshiba-to-present-cutting-edge-quantum-security-solutions-for-singapore-enterprises-at-atxsg-2024-2")[_Deploying and maintaining a state-of-the-art standards-compliant nationwide quantum key distribution (QKD) network._]
 
-      Spearheading network-related projects involving planning, designing, procurement, developing, configuring, and commissioning networks both internal and external solutions, in on-premises, cloud, and hybrid environments.
-
       Managing and troubleshooting network devices such as routers, switches and access points, with hands-on experience in server rack and cable management.
 
       Collaborating with cross-functional teams to develop and implement networking, security policies, CI/CD workflows, and cloud resource provisioning.
 
-      Managing AWS accounts, Microsoft 365 services, secure identity and access, zero-trust networking, SSO and SCIM, on-premises servers, hypervisors (Proxmox VE), endpoints and printers.
+      Managing AWS accounts, Microsoft 365 services, secure identity and access, zero-trust networking, SSO and SCIM, on-premises servers, endpoints and printers.
 
-      Conducting technical onboarding, support, troubleshooting and training for staff.
+      Conducting technical onboarding, support, troubleshooting and training.
     ]
 
     #milestone(
@@ -45,7 +43,7 @@
     )[
       Developed mathematical QKD models, orbital mechanics simulations and statistical analysis tools, using the SciPy and PyData stacks.
 
-      Integrated these components into an in-house satellite constellation design stack tailored for the company's use cases, eliminating the need for costly third-party alternatives.
+      Integrated these components into an in-house satellite constellation design toolkit tailored for the company's use cases, eliminating the need for costly third-party alternatives.
     ]
 
     #milestone(
@@ -72,7 +70,9 @@
       ("Bachelor of Engineering Science (Aerospace)", "Aug 2017", "Dec 2020"),
       organisation: link("https://www.ntu.edu.sg/education/undergraduate-programme/renaissance-engineering-programme-(rep)", "Nanyang Technological University"),
       location: "Singapore",
-    )[]
+    )[
+      Graduated from Renaissance Engineering Programme with first-class honours.
+    ]
 
   ],
   [
@@ -87,6 +87,15 @@
     ]
 
     = Skills
+
+    === Network Administration
+    #taglist(
+      [ Cisco IOS ],
+      [ Juniper ],
+      [ SNMP ],
+      [ Grafana/LGTM ],
+      [ 󱂚 Ansible ]
+    )
 
     === Cloud Infrastructure
     #taglist(
@@ -104,6 +113,16 @@
       [ 󰢱 Lua ],
       [ 󱆃 Bash ],
       [ 󱄅 Nix ],
+    )
+
+    === Organisational IT
+    #taglist(
+      [ Microsoft 365 ],
+      [ Windows ],
+      [ Linux ],
+      [ Cloudflare Access ],
+      [ Microsoft Teams Rooms ],
+      [ Hikvision ],
     )
 
     === Graphic Design

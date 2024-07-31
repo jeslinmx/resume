@@ -4,7 +4,7 @@
 #template(
   "Jeshua Lin",
   [
-    I'm a *software engineer*, a tinkerer, and a fast learner with a thirst for broadening and deepening my knowledge and skills.\ I thrive on solving challenging problems with real impact.
+    I am a *fast, self-motivated learner* and an *independent problem solver*, with a proven track record of taking on complex projects beyond my comfort zone and delivering, no matter what it takes.
   ],
   {
     box(radius: 100%, clip: true, image("assets/me.jpg"))
@@ -25,15 +25,15 @@
       organisation: link("https://speqtralquantum.com/", "SpeQtral"),
       location: "Singapore",
     )[
-      #link("https://speqtralquantum.com/newsroom/speqtral-and-toshiba-to-present-cutting-edge-quantum-security-solutions-for-singapore-enterprises-at-atxsg-2024-2")[_Spearheading the deployment of a state-of-the-art standards-compliant nationwide quantum key distribution (QKD) network._]
+      #link("https://speqtralquantum.com/newsroom/speqtral-and-toshiba-to-present-cutting-edge-quantum-security-solutions-for-singapore-enterprises-at-atxsg-2024-2")[_Deploying and maintaining a state-of-the-art standards-compliant nationwide quantum key distribution (QKD) network._]
 
       Developing and deploying proof-of-concept applications and APIs in Svelte and Python, demonstrating practical implementations of quantum-secure communication within a cloud-based environment using QKD.
 
       Implementing and managing CI/CD workflows across the whole organisation, facilitating agile development within and between various functional teams.
 
-      Managing AWS accounts; Microsoft 365 services; endpoints (Intune); secure identity and access (Entra); zero-trust networking (Cloudflare Access); SSO and SCIM; on-premises servers, hypervisors (Proxmox VE), networks and printers.
+      Managing AWS accounts, Microsoft 365 services, secure identity and access, zero-trust networking, SSO and SCIM, on-premises servers, endpoints and printers.
 
-      Conducting technical onboarding, support, troubleshooting and training for staff.
+      Conducting technical onboarding, support, troubleshooting and training.
     ]
 
     #milestone(
@@ -43,7 +43,7 @@
     )[
       Developed mathematical QKD models, orbital mechanics simulations and statistical analysis tools, using the SciPy and PyData stacks.
 
-      Integrated these components into an in-house satellite constellation design stack tailored for the company's use cases, eliminating the need for costly third-party alternatives.
+      Integrated these components into an in-house satellite constellation design toolkit tailored for the company's use cases, eliminating the need for costly third-party alternatives.
     ]
 
     #milestone(
@@ -69,7 +69,9 @@
       ("Bachelor of Engineering Science (Aerospace)", "Aug 2017", "Dec 2020"),
       organisation: link("https://www.ntu.edu.sg/education/undergraduate-programme/renaissance-engineering-programme-(rep)", "Nanyang Technological University"),
       location: "Singapore",
-    )[]
+    )[
+      Graduated from Renaissance Engineering Programme with first-class honours.
+    ]
 
   ],
   [
@@ -93,6 +95,15 @@
       [ 󰡨 Docker ],
     )
 
+    === Network Administration
+    #taglist(
+      [ Cisco IOS ],
+      [ Juniper ],
+      [ SNMP ],
+      [ Grafana/LGTM ],
+      [ 󱂚 Ansible ]
+    )
+
     === Programming
     #taglist(
       [ 󰌞 Javascript ],
@@ -101,6 +112,16 @@
       [ 󰢱 Lua ],
       [ 󱆃 Bash ],
       [ 󱄅 Nix ],
+    )
+
+    === Organisational IT
+    #taglist(
+      [ Microsoft 365 ],
+      [ Windows ],
+      [ Linux ],
+      [ Cloudflare Access ],
+      [ Microsoft Teams Rooms ],
+      [ Hikvision ],
     )
 
     === Graphic Design
