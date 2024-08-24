@@ -80,9 +80,10 @@
     === #link("https://www.credly.com/badges/4ec2308e-10f8-4c2d-adb9-f37b8f3c31d0")[Amazon Web Services Certified Cloud Practitioner (AWS CCP)]
     September 2023
 
+    === #link("https://www.credly.com/badges/72ada020-9639-4143-9522-c1e9997540f2")[Cisco Certified Network Associate (CCNA)]
+    August 2024
+
     #text(fill: luma(120))[
-      === Cisco Certified Network Associate (CCNA)
-      August 2024 (targeted)
     ]
 
     = Skills
