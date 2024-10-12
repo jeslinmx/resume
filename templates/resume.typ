@@ -63,7 +63,7 @@
   grid(
     columns: (1fr, sidebar-width),
     column-gutter: 2.5em,
-    row-gutter: 4em,
+    row-gutter: 2em,
     [
       = #text(size: 2em, weight: 200, name)
       #quote(blurb, block: true)
@@ -115,8 +115,12 @@
       ..titles-and-dates.pos().map(x =>
         ((title, start, end) => (
           grid.cell(inset: (left: -bar-margin - bar-thickness / 2), heading(level: 2, {
-            box(inset: (right: bar-margin), line(length: 0.75em, angle: 90deg, stroke: bar-thickness + accent-colour))
-            smallcaps(text(fill: accent-colour, title))
+            grid(
+              columns: (bar-thickness, 1fr),
+              column-gutter: (bar-margin),
+              grid.cell(fill: accent-colour, {}),
+              smallcaps(text(fill: accent-colour, title))
+            )
           })),
           [ #start -- #end ],
         ))(..x)
