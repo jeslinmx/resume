@@ -20,16 +20,16 @@
     = Experience
 
     #milestone(
-      ("Network Solutions Engineer & IT Manager", "Jul 2023", "Current"),
+      ("Quantum Network Solutions Engineer\n& IT Manager", "Jul 2023", "Current"),
       ("Software Engineer", "Jan 2022", "Jun 2023"),
       organisation: link("https://speqtralquantum.com/", "SpeQtral"),
       location: "Singapore",
     )[
-      #link("https://speqtralquantum.com/newsroom/speqtral-and-toshiba-to-present-cutting-edge-quantum-security-solutions-for-singapore-enterprises-at-atxsg-2024-2")[_Deploying and maintaining a state-of-the-art standards-compliant nationwide quantum key distribution (QKD) network._]
+      #link("https://speqtralquantum.com/newsroom/speqtral-and-toshiba-to-present-cutting-edge-quantum-security-solutions-for-singapore-enterprises-at-atxsg-2024-2")[_Designing and deploying a state-of-the-art standards-compliant nationwide quantum key distribution (QKD) network._]
 
-      Developing and deploying proof-of-concept applications and APIs in Svelte and Python, demonstrating practical implementations of quantum-secure communication within a cloud-based environment using QKD.
-
-      Implementing and managing CI/CD workflows across the whole organisation, facilitating agile development within and between various functional teams.
+      - Led installation and configuration tasks at network nodes, ensuring seamless integration of all components.
+      - Facilitating technical planning in discussions with both high-level decision makers and operational staff from partner organizations and customers, as well as providing hands-on assistance with trainings and demonstrations to ensure smooth deployment and understanding of QKD technology.
+      - Deployed tailored network monitoring and alerting solutions to enable proactive maintenance and continuous observability, while actively improving the system based on real-time feedback and performance data.
 
       Managing AWS accounts, Microsoft 365 services, secure identity and access, zero-trust networking, SSO and SCIM, on-premises servers, endpoints and printers.
 
@@ -98,11 +98,19 @@
 
     === Network Administration
     #taglist(
-      [ Cisco IOS ],
+      [ Grafana ],
+      [ Prometheus ],
+      [ Cisco ],
       [ Juniper ],
-      [ SNMP ],
-      [ Grafana/LGTM ],
-      [ 󱂚 Ansible ]
+    )
+
+    === System Administration
+    #taglist(
+      [  Linux ],
+      [ 󱆃 Bash ],
+      [ 󱄅 Nix/NixOS ],
+      [ 󱂚 Ansible ],
+      [  Windows ],
     )
 
     === Programming
@@ -111,17 +119,13 @@
       [  Svelte ],
       [ 󰌠 Python ],
       [ 󰢱 Lua ],
-      [ 󱆃 Bash ],
-      [ 󱄅 Nix ],
     )
 
-    === Organisational IT
+    === IT Administration
     #taglist(
-      [ Microsoft 365 ],
-      [ Windows ],
-      [ Linux ],
-      [ Cloudflare Access ],
-      [ Microsoft Teams Rooms ],
+      [ 󰏆 Microsoft 365/Exchange ],
+      [ 󰊻 MS Teams Rooms ],
+      [ #fa-cloudflare() Cloudflare Zero Trust ],
       [ Hikvision ],
     )
 
