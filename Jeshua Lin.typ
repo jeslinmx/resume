@@ -10,40 +10,38 @@
     box(radius: 100%, clip: true, image("assets/me.jpg"))
     info(
       email: "jeslinmx@gmail.com",
-      phone: "+65 9663 2384",
       linkedin: "jeshua-lin",
       github: "jeslinmx",
-      location: "Singapore",
     )
   },
   [
     = Experience
 
     #milestone(
-      ("Quantum Network Solutions Engineer\n& IT Manager", "Jul 2023", "Current"),
-      ("Software Engineer", "Jan 2022", "Jun 2023"),
+      ("Quantum Network Solutions Engineer\n& Internal IT Systems Administrator", "Jul 2023", "Current"),
       organisation: link("https://speqtralquantum.com/", "SpeQtral"),
       location: "Singapore",
     )[
-      #link("https://speqtralquantum.com/newsroom/speqtral-and-toshiba-to-present-cutting-edge-quantum-security-solutions-for-singapore-enterprises-at-atxsg-2024-2")[_Designing and deploying a state-of-the-art standards-compliant nationwide quantum key distribution (QKD) network._]
+      #link("https://speqtralquantum.com/newsroom/speqtral-and-toshiba-to-present-cutting-edge-quantum-security-solutions-for-singapore-enterprises-at-atxsg-2024-2")[Contributed to the _architecture and implementation of Singapore's first nationwide quantum-safe network_, working closely with _government_ and _financial sector stakeholders_ on high-profile proof-of-concept projects.]
 
-      - Led installation and configuration tasks at network nodes, ensuring seamless integration of all components.
-      - Facilitating technical planning in discussions with both high-level decision makers and operational staff from partner organizations and customers, as well as providing hands-on assistance with trainings and demonstrations to ensure smooth deployment and understanding of QKD technology.
-      - Deployed tailored network monitoring and alerting solutions to enable proactive maintenance and continuous observability, while actively improving the system based on real-time feedback and performance data.
+      - Deployed and managed quantum appliances and classical infrastructure, leveraging _modern tooling_ and _best practices_ for _resilience, seamless provisioning, and consistent configuration_.
+      - Collaborated extensively with vendors, partners, and regulatory stakeholders on _strategic planning, integration design, and technical validation_ efforts.
+      - Built _tailored network monitoring & alerting pipelines_, enabling _24/7 network observability_ and _real-time situational awareness_ across distributed nodes.
 
-      Managing AWS accounts, Microsoft 365 services, secure identity and access, zero-trust networking, SSO and SCIM, on-premises servers, endpoints and printers.
+      Designed and deployed an internal IT ticketing system, _streamlining workflow efficiency_ for provisioning AWS and on-premises infrastructure, and _improving staff support request resolution_.
 
-      Conducting technical onboarding, support, troubleshooting and training.
+      Developed and maintained internal IT documentation to _ensure team alignment_ and _support knowledge sharing_.
     ]
 
     #milestone(
-      ("Software Engineer Intern", "May 2021", "Sep 2021"),
+      ("Quantum Systems/Software Engineer", "Jan 2022", "Jun 2023"),
+      ("Astrodynamics Software Engineer Intern", "May 2021", "Sep 2021"),
       organisation: link("https://speqtralquantum.com/", "SpeQtral"),
       location: "Singapore",
     )[
-      Developed mathematical QKD models, orbital mechanics simulations and statistical analysis tools, using the SciPy and PyData stacks.
+      Developed _mathematical simulations for Quantum Key Distribution (QKD)_, as well as orbital mechanics models and statistical analysis tools, advancing the company's technical capabilities in quantum satellite communications.
 
-      Integrated these components into an in-house satellite constellation design toolkit tailored for the company's use cases, eliminating the need for costly third-party alternatives.
+      Integrated custom-built components into an _in-house satellite orbit design toolchain_, streamlining design exploration and _satellite mission planning in alignment with internal needs_ and reducing reliance on third-party solutions.
     ]
 
     #milestone(
@@ -51,7 +49,10 @@
       organisation: link("https://careers.dyson.com/en-gb/what-you-can-do/engineer/research/", "Dyson"),
       location: "Singapore",
     )[
-      Automated the fluid dynamics team’s existing computational fluid dynamics (CFD) workflow, saving up to 50 man-hours per design optimization study.
+      Automated the fluid dynamics team’s existing computational fluid dynamics (CFD) workflow, reducing the _burden of manual setup_ and _reducing simulation preparation time by over 80%_.
+
+      - Developed a simulation parameterization tool that allowed the team to batch generate the simulation definition files for _a design study in one step_, speeding up the process of design evaluation.
+      - Reduced time-consuming customization from up to 30 minutes per design variation to a _streamlined, automated process_, enabling _faster turnaround for design studies_.
     ]
 
     #milestone(
@@ -113,20 +114,20 @@
       [  Windows ],
     )
 
-    === Programming
-    #taglist(
-      [ 󰌞 Javascript ],
-      [  Svelte ],
-      [ 󰌠 Python ],
-      [ 󰢱 Lua ],
-    )
-
     === IT Administration
     #taglist(
       [ 󰏆 Microsoft 365/Exchange ],
       [ 󰊻 MS Teams Rooms ],
       [ #fa-cloudflare() Cloudflare Zero Trust ],
       [ Hikvision ],
+    )
+
+    === Programming
+    #taglist(
+      [ 󰌞 Javascript ],
+      [  Svelte ],
+      [ 󰌠 Python ],
+      [ 󰢱 Lua ],
     )
 
     === Graphic Design
