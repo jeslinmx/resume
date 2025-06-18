@@ -4,7 +4,7 @@
 #template(
   "Jeshua Lin",
   [
-    I am a *fast, self-motivated learner* and an *independent problem solver*, with a proven track record of taking on complex projects beyond my comfort zone and delivering, no matter what it takes.
+    I thrive on tackling *tough* and *unfamiliar* challenges, taking all-round *ownership* of complex projects, and blazing new trails to *deliver results*---fast. Always *learning*, always *building*, always *moving forward*.
   ],
   {
     box(radius: 100%, clip: true, image("assets/me.jpg"))
@@ -78,55 +78,59 @@
   [
     = Certifications
 
-    === #link("https://www.credly.com/badges/4ec2308e-10f8-4c2d-adb9-f37b8f3c31d0")[Amazon Web Services Certified Cloud Practitioner (AWS CCP)]
-    September 2023
-
     === #link("https://www.credly.com/badges/72ada020-9639-4143-9522-c1e9997540f2")[Cisco Certified Network Associate (CCNA)]
     August 2024
 
-    #text(fill: luma(120))[
-    ]
+    === #link("https://www.credly.com/badges/4ec2308e-10f8-4c2d-adb9-f37b8f3c31d0")[Amazon Web Services Certified Cloud Practitioner (AWS CCP)]
+    September 2023
 
     = Skills
 
-    === Cloud Infrastructure
+    === DevOps
     #taglist(
-      [ 󰸏 AWS ],
-      [ #fa-cloudflare() Cloudflare ],
-      [ 󱁢 Terraform ],
+      [ 󱂚 Ansible ],
       [ 󰡨 Docker ],
+      [  Git ],
+      [ Prometheus ],
+      [ Grafana ],
     )
 
-    === Network Administration
+    === Infrastructure
     #taglist(
-      [ Grafana ],
-      [ Prometheus ],
-      [ Cisco ],
-      [ Juniper ],
+      [ 󰸏 Amazon Web Services ],
+      [ Proxmox VE ],
+      [ 󱄅 NixOps ],
+      [ 󱁢 Terraform ],
     )
 
     === System Administration
     #taglist(
       [  Linux ],
+      [ 󱄅 Nix ],
       [ 󱆃 Bash ],
-      [ 󱄅 Nix/NixOS ],
-      [ 󱂚 Ansible ],
-      [  Windows ],
+      [ 󰨊 PowerShell ],
     )
 
-    === IT Administration
+    === Networking
     #taglist(
-      [ 󰏆 Microsoft 365/Exchange ],
-      [ 󰊻 MS Teams Rooms ],
+      [ Cisco ],
+      [ Juniper ],
+      [ Cloudflare ],
+      [ ZeroTier ],
+    )
+
+    === Organisational IT
+    #taglist(
+      [ 󰏆 MS365 administration ],
       [ #fa-cloudflare() Cloudflare Zero Trust ],
-      [ Hikvision ],
+      [ Hikvision Access ],
     )
 
     === Programming
     #taglist(
+      [ 󰌠 Python ],
       [ 󰌞 Javascript ],
       [  Svelte ],
-      [ 󰌠 Python ],
       [ 󰢱 Lua ],
     )
 
