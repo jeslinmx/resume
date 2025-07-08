@@ -18,19 +18,19 @@
     = Experience
 
     #milestone(
-      ("Quantum Network Solutions Engineer\n& Internal IT Systems Administrator", "Jul 2023", "Current"),
+      ("Quantum Network Solutions Engineer\n& Internal Infrastructure Administrator", "Jul 2023", "Current"),
       organisation: link("https://speqtralquantum.com/", "SpeQtral"),
       location: "Singapore",
     )[
       #link("https://speqtralquantum.com/newsroom/speqtral-and-toshiba-to-present-cutting-edge-quantum-security-solutions-for-singapore-enterprises-at-atxsg-2024-2")[Contributed to the _architecture and implementation of Singapore's first nationwide quantum-safe network_, working closely with _government_ and _financial sector stakeholders_ on high-profile proof-of-concept projects.]
 
-      - Deployed and managed quantum appliances and classical infrastructure, leveraging _modern tooling_ and _best practices_ for _resilience, seamless provisioning, and consistent configuration_.
+      - Deployed and managed quantum appliances, networking equipment, and Linux systems, leveraging _modern tooling_ and _best practices_ for _resilience, seamless provisioning, and consistent configuration_.
       - Collaborated extensively with vendors, partners, and regulatory stakeholders on _strategic planning, integration design, and technical validation_ efforts.
       - Built _tailored network monitoring & alerting pipelines_, enabling _24/7 network observability_ and _real-time situational awareness_ across distributed nodes.
 
-      Designed and deployed an internal IT ticketing system, _streamlining workflow efficiency_ for provisioning AWS and on-premises infrastructure, and _improving staff support request resolution_.
+      Supported _continuous integration and testing_ of the software development team, through implementing automated pipelines using both on-premises and cloud resources.
 
-      Developed and maintained internal IT documentation to _ensure team alignment_ and _support knowledge sharing_.
+      Designed and deployed an internal IT ticketing system, _streamlining workflow efficiency_ for provisioning AWS and on-premises infrastructure, and _improving staff support request resolution_.
     ]
 
     #milestone(
