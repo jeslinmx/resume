@@ -18,23 +18,23 @@
     = Experience
 
     #milestone(
-      ("Quantum Network Solutions Engineer\n& Internal Infrastructure Administrator", "Jul 2023", "Current"),
+      ("Solutions Engineer, Quantum Networks /\nInfrastructure & Automation", "Jul 2023", "Current"),
       organisation: link("https://speqtralquantum.com/", "SpeQtral"),
       location: "Singapore",
     )[
       #link("https://speqtralquantum.com/newsroom/speqtral-and-toshiba-to-present-cutting-edge-quantum-security-solutions-for-singapore-enterprises-at-atxsg-2024-2")[Contributed to the _architecture and implementation of Singapore's first nationwide quantum-safe network_, working closely with _government_ and _financial sector stakeholders_ on high-profile proof-of-concept projects.]
 
-      - Deployed and managed quantum appliances, networking equipment, and Linux systems, leveraging _modern tooling_ and _best practices_ for _resilience, seamless provisioning, and consistent configuration_.
-      - Collaborated extensively with vendors, partners, and regulatory stakeholders on _strategic planning, integration design, and technical validation_ efforts.
-      - Built _tailored network monitoring & alerting pipelines_, enabling _24/7 network observability_ and _real-time situational awareness_ across distributed nodes.
+      - Deployed and managed _quantum key distribution (QKD) hardware_ as well as _classical networking and compute platforms_, achieving high-availability, seamless provisioning, and consistent configuration management through _virtualization_, _containerization_, and _infrastructure as code (IaC)_.
+      - Collaborated closely with vendors, partners and end-users on _strategic planning, integration design, and technical validation_ efforts.
+      - Implemented _tailored monitoring dashboards & alerting systems_, enabling _24/7 observability and auditability_ across distributed network nodes.
 
-      Supported _continuous integration and testing_ of the software development team, through implementing automated pipelines using both on-premises and cloud resources.
+      Built _automated testing and building pipelines_ using both on-premises and cloud resources, supporting the software development team's Agile CI workflow.
 
-      Designed and deployed an internal IT ticketing system, _streamlining workflow efficiency_ for provisioning AWS and on-premises infrastructure, and _improving staff support request resolution_.
+      Designed and deployed an internal ticketing system, _streamlining workflow efficiency_ for provisioning AWS and on-premises infrastructure, and _improving staff support request resolution_.
     ]
 
     #milestone(
-      ("Quantum Systems/Software Engineer", "Jan 2022", "Jun 2023"),
+      ("Software Engineer, Quantum Systems", "Jan 2022", "Jun 2023"),
       ("Astrodynamics Software Engineer Intern", "May 2021", "Sep 2021"),
       organisation: link("https://speqtralquantum.com/", "SpeQtral"),
       location: "Singapore",
@@ -111,6 +111,14 @@
       [ 󰨊 PowerShell ],
     )
 
+    === Programming
+    #taglist(
+      [ 󰌠 Python ],
+      [ 󰌞 Javascript ],
+      [  Svelte ],
+      [ 󰢱 Lua ],
+    )
+
     === Networking
     #taglist(
       [ Cisco ],
@@ -124,14 +132,6 @@
       [ 󰏆 MS365 administration ],
       [ #fa-cloudflare() Cloudflare Zero Trust ],
       [ Hikvision Access ],
-    )
-
-    === Programming
-    #taglist(
-      [ 󰌠 Python ],
-      [ 󰌞 Javascript ],
-      [  Svelte ],
-      [ 󰢱 Lua ],
     )
 
     === Graphic Design
