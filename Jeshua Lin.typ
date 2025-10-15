@@ -4,7 +4,7 @@
 #template(
   "Jeshua Lin",
   [
-    I thrive on tackling *tough* and *unfamiliar* challenges, taking all-round *ownership* of complex projects, and blazing new trails to *deliver results*---fast. Always *learning*, always *building*, always *moving forward*.
+    I thrive on tackling *tough* and *unfamiliar* challenges, taking all-round *ownership* of complex projects, and blazing new trails to *deliver results* fast. Always *learning*, always *building*, always *moving forward*.
   ],
   {
     box(radius: 100%, clip: true, image("assets/me.jpg"))
@@ -78,6 +78,9 @@
   [
     = Certifications
 
+    === #link("https://www.credly.com/badges/4c50a624-dbec-41da-838b-d05f6206253d")[Certified in Cybersecurity (CC)]
+    September 2025
+
     === #link("https://www.credly.com/badges/72ada020-9639-4143-9522-c1e9997540f2")[Cisco Certified Network Associate (CCNA)]
     August 2024
 
@@ -90,9 +93,11 @@
     #taglist(
       [ 󱂚 Ansible ],
       [ 󰡨 Docker ],
+      [ 󱃾 Kubernetes ],
+      [ 󱄅 Nix ],
       [  Git ],
-      [ Prometheus ],
-      [ Grafana ],
+      [  Prometheus ],
+      [  Grafana ],
     )
 
     === Infrastructure
@@ -103,20 +108,19 @@
       [ 󱁢 Terraform ],
     )
 
-    === System Administration
-    #taglist(
-      [  Linux ],
-      [ 󱄅 Nix ],
-      [ 󱆃 Bash ],
-      [ 󰨊 PowerShell ],
-    )
-
     === Programming
     #taglist(
       [ 󰌠 Python ],
       [ 󰌞 Javascript ],
       [  Svelte ],
       [ 󰢱 Lua ],
+    )
+
+    === System Administration
+    #taglist(
+      [  Linux ],
+      [ 󱆃 Bash ],
+      [ 󰨊 PowerShell ],
     )
 
     === Networking
