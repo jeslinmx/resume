@@ -4,13 +4,13 @@
 #template(
   "Jeshua Lin",
   [
-    I thrive on tackling *tough* and *unfamiliar* challenges, taking all-round *ownership* of complex projects, and blazing new trails to *deliver results* fast. Always *learning*, always *building*, always *moving forward*.
+    I thrive on tackling *tough* and *unfamiliar* challenges, taking all-round *ownership* of complex projects, and blazing new trails to *deliver results fast*. Always *learning*, always *building*, always *moving forward*.
   ],
   {
     box(radius: 100%, clip: true, image("assets/me.jpg"))
     info(
       email: "jeslinmx@gmail.com",
-      linkedin: "jeshua-lin",
+      linkedin: "jeshua-las well asin",
       github: "jeslinmx",
     )
   },
@@ -18,7 +18,21 @@
     = Experience
 
     #milestone(
-      ("Solutions Engineer, Quantum Networks /\nInfrastructure & Automation", "Jul 2023", "Current"),
+      ("DevSecOps Engineer", "Oct 2025", "current"),
+      organisation: link("https://www.htx.com", "HTX"),
+      location: "Singapore",
+    )[
+      Administering a leading cryptocurrency exchange's platform, ensuring _security, robustness and compliance_ in a high-stakes, fast-paced environment.
+
+      Orchestrating the lifecycle of critical database infrastructure, including _secure provisioning, access control, and regular permission audits_.
+
+      Managing the internal GitLab and associated CI/CD systems, _streamlining_ the review and deployment of application configuration changes to _enhance developer velocity and system stability_.
+
+      Contributing code to internal tooling, developing solutions to automate operational tasks and improve system monitoring and security capabilities.
+    ]
+
+    #milestone(
+      ("Solutions Engineer, Quantum Networks /\nInfrastructure & Automation", "Jul 2023", "Oct 2025"),
       organisation: link("https://speqtralquantum.com/", "SpeQtral"),
       location: "Singapore",
     )[
