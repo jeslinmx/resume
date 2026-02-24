@@ -10,7 +10,7 @@
     box(radius: 100%, clip: true, image("assets/me.jpg"))
     info(
       email: "jeslinmx@gmail.com",
-      linkedin: "jeshua-las well asin",
+      linkedin: "jeshua-lin",
       github: "jeslinmx",
     )
   },
