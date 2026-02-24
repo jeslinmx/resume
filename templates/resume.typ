@@ -9,20 +9,20 @@
   accent-colour: rgb("#1e66f5"),
   top-right,
   bottom-left,
-  bottom-right
+  bottom-right,
 ) = {
   set document(
     title: name,
     author: name,
-    date: auto
+    date: auto,
   )
   set page(
     paper: "a4",
     numbering: none,
     margin: (
       x: 2.0cm,
-      y: 1.5cm
-    )
+      y: 1.5cm,
+    ),
   )
   set text(
     font: ("Symbols Nerd Font", "Assistant"),
@@ -31,10 +31,10 @@
     lang: "en",
     region: "SG",
     weight: 400,
-    number-type: "lining"
+    number-type: "lining",
   )
   set par(
-    leading: 0.75em
+    leading: 0.75em,
   )
   accent.update(accent-colour)
 
@@ -51,8 +51,8 @@
       fill: luma(0),
       font: "DM Serif Display",
       size: 1.7em,
-      par(leading: 0.65em, it.body)
-    )
+      par(leading: 0.65em, it.body),
+    ),
   )
   show link: it => {
     it
@@ -69,8 +69,8 @@
       #quote(blurb, block: true)
     ],
     top-right,
-    bottom-left,
-    bottom-right
+
+    bottom-left, bottom-right,
   )
 }
 
@@ -83,16 +83,23 @@
     columns: (auto, 1fr),
     column-gutter: 0.5em,
     align: (center + horizon, left + horizon),
-    rows: (1em),
+    rows: 1em,
     row-gutter: 0.6em,
-    ..contact-info.named().pairs().map(i => (
-      email:    e => (fa-envelope(), link("mailto:" + e, e)),
-      phone:    p => (fa-phone(), link("tel:" + p, p)),
-      location: l => (fa-city(), l),
-      website:  u => (fa-link(), link(u)),
-      linkedin: l => (fa-linkedin-in(), link("https://linkedin.com/in/" + l, l)),
-      github:   g => (fa-github(), link("https://github.com/" + g, g))
-    ).at(i.at(0))(i.at(1))).flatten()
+    ..contact-info
+      .named()
+      .pairs()
+      .map(i => (
+        email: e => (fa-envelope(), link("mailto:" + e, e)),
+        phone: p => (fa-phone(), link("tel:" + p, p)),
+        location: l => (fa-city(), l),
+        website: u => (fa-link(), link(u)),
+        linkedin: l => (
+          fa-linkedin-in(),
+          link("https://linkedin.com/in/" + l, l),
+        ),
+        github: g => (fa-github(), link("https://github.com/" + g, g)),
+      ).at(i.at(0))(i.at(1)))
+      .flatten()
   )
 }
 
@@ -101,32 +108,40 @@
   organisation: "",
   location: "",
   accent-colour: auto,
-  content
+  content,
 ) = context {
   let bar-margin = 0.6em
   let bar-thickness = 3pt
-  let accent-colour = if accent-colour == auto { accent.get() } else { accent-colour }
+  let accent-colour = if accent-colour == auto { accent.get() } else {
+    accent-colour
+  }
   block(above: 2em, breakable: false, [
     #grid(
       columns: (1fr, auto),
-      column-gutter: (1em),
+      column-gutter: 1em,
       align: (left, right),
       row-gutter: 0.8em,
-      ..titles-and-dates.pos().map(x =>
-        ((title, start, end) => (
-          grid.cell(inset: (left: -bar-margin - bar-thickness / 2), heading(level: 2, {
-            grid(
-              columns: (bar-thickness, 1fr),
-              column-gutter: (bar-margin),
-              grid.cell(fill: accent-colour, {}),
-              smallcaps(text(fill: accent-colour, title))
-            )
-          })),
-          [ #start -- #end ],
-        ))(..x)
-      ).flatten(),
+      ..titles-and-dates
+        .pos()
+        .map(x => (
+          (title, start, end) => (
+            grid.cell(inset: (left: -bar-margin - bar-thickness / 2), heading(
+              level: 2,
+              {
+                grid(
+                  columns: (bar-thickness, 1fr),
+                  column-gutter: (bar-margin),
+                  grid.cell(fill: accent-colour, {}),
+                  smallcaps(text(fill: accent-colour, title)),
+                )
+              },
+            )),
+            [ #start -- #end ],
+          )
+        )(..x))
+        .flatten(),
       text(weight: 500, organisation),
-      text(weight: 500, location)
+      text(weight: 500, location),
     )
 
     #content
@@ -134,16 +149,14 @@
 }
 
 #let taglist(..tags) = {
-  par(leading: 0.3em,
-    for tag in tags.pos() {
-      box(
-        inset: (x: 0.6em, y: 0.4em),
-        outset: (x: -0.15em, y: 0em),
-        radius: 2pt,
-        stroke: 1pt + luma(200),
-        tag
-      )
-    }
-  )
+  par(leading: 0.3em, for tag in tags.pos() {
+    box(
+      inset: (x: 0.6em, y: 0.4em),
+      outset: (x: -0.15em, y: 0em),
+      radius: 2pt,
+      stroke: 1pt + luma(200),
+      tag,
+    )
+  })
 }
 

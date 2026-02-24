@@ -1,4 +1,4 @@
-#import "templates/resume.typ": template, milestone, info, taglist
+#import "templates/resume.typ": info, milestone, taglist, template
 #import "@preview/fontawesome:0.2.0": *
 
 #template(
@@ -30,11 +30,17 @@
     ]
 
     #milestone(
-      ("Solutions Engineer, Quantum Networks /\nInfrastructure & Automation", "Jul 2023", "Oct 2025"),
+      (
+        "Solutions Engineer, Quantum Networks /\nInfrastructure & Automation",
+        "Jul 2023",
+        "Oct 2025",
+      ),
       organisation: link("https://speqtralquantum.com/", "SpeQtral"),
       location: "Singapore",
     )[
-      #link("https://speqtralquantum.com/newsroom/speqtral-and-toshiba-to-present-cutting-edge-quantum-security-solutions-for-singapore-enterprises-at-atxsg-2024-2")[Contributed to the _architecture and implementation of Singapore's first nationwide quantum-safe network_, working closely with _government_ and _financial sector stakeholders_ on high-profile proof-of-concept projects.]
+      #link(
+        "https://speqtralquantum.com/newsroom/speqtral-and-toshiba-to-present-cutting-edge-quantum-security-solutions-for-singapore-enterprises-at-atxsg-2024-2",
+      )[Contributed to the _architecture and implementation of Singapore's first nationwide quantum-safe network_, working closely with _government_ and _financial sector stakeholders_ on high-profile proof-of-concept projects.]
 
       - Deployed and managed _quantum key distribution (QKD) hardware_ as well as _classical networking and compute platforms_, achieving high-availability, seamless provisioning, and consistent configuration management through _virtualization_, _containerization_, and _infrastructure as code (IaC)_.
       - Collaborated closely with vendors, partners and end-users on _strategic planning, integration design, and technical validation_ efforts.
@@ -42,7 +48,7 @@
 
       Built _automated testing and building pipelines_ using both on-premises and cloud resources, supporting the software development team's Agile CI workflow.
 
-      Designed and deployed an internal ticketing system, _streamlining workflow efficiency_ for provisioning AWS and on-premises infrastructure, and _improving staff support request resolution_.
+      Built an internal ticketing system, streamlining on-prem and cloud infrastructure provisioning and _improving staff support request resolution_.
     ]
 
     #milestone(
@@ -58,7 +64,10 @@
 
     #milestone(
       ("Fluid Dynamics Simulation Intern", "May 2020", "Jul 2020"),
-      organisation: link("https://careers.dyson.com/en-gb/what-you-can-do/engineer/research/", "Dyson"),
+      organisation: link(
+        "https://careers.dyson.com/en-gb/what-you-can-do/engineer/research/",
+        "Dyson",
+      ),
       location: "Singapore",
     )[
       Automated the fluid dynamics team’s existing computational fluid dynamics (CFD) workflow, reducing the _burden of manual setup_ and _reducing simulation preparation time by over 80%_.
@@ -69,7 +78,10 @@
 
     #milestone(
       ("Research Intern", "Jul 2019", "Sep 2019"),
-      organisation: link("https://www.ost.ch/en/research-and-consulting-services/technology/renewable-energies-and-environmental-engineering/iet-institute-for-energy-technology", "Institut für Energietechnik"),
+      organisation: link(
+        "https://www.ost.ch/en/research-and-consulting-services/technology/renewable-energies-and-environmental-engineering/iet-institute-for-energy-technology",
+        "Institut für Energietechnik",
+      ),
       location: "Rapperswil, Switzerland",
     )[
       Designed computer-aided geometry optimization workflows with industrial applications in wind energy generation and rail transportation.
@@ -80,7 +92,10 @@
     #milestone(
       ("Master of Science in Technology Management", "Dec 2020", "Dec 2021"),
       ("Bachelor of Engineering Science (Aerospace)", "Aug 2017", "Dec 2020"),
-      organisation: link("https://www.ntu.edu.sg/education/undergraduate-programme/renaissance-engineering-programme-(rep)", "Nanyang Technological University"),
+      organisation: link(
+        "https://www.ntu.edu.sg/education/undergraduate-programme/renaissance-engineering-programme-(rep)",
+        "Nanyang Technological University",
+      ),
       location: "Singapore",
     )[
       Graduated from Renaissance Engineering Programme with first-class honours.
@@ -90,13 +105,19 @@
   [
     = Certifications
 
-    === #link("https://www.credly.com/badges/4c50a624-dbec-41da-838b-d05f6206253d")[Certified in Cybersecurity (CC)]
+    === #link(
+      "https://www.credly.com/badges/4c50a624-dbec-41da-838b-d05f6206253d",
+    )[Certified in Cybersecurity (CC)]
     September 2025
 
-    === #link("https://www.credly.com/badges/72ada020-9639-4143-9522-c1e9997540f2")[Cisco Certified Network Associate (CCNA)]
+    === #link(
+      "https://www.credly.com/badges/72ada020-9639-4143-9522-c1e9997540f2",
+    )[Cisco Certified Network Associate (CCNA)]
     August 2024
 
-    === #link("https://www.credly.com/badges/4ec2308e-10f8-4c2d-adb9-f37b8f3c31d0")[Amazon Web Services Certified Cloud Practitioner (AWS CCP)]
+    === #link(
+      "https://www.credly.com/badges/4ec2308e-10f8-4c2d-adb9-f37b8f3c31d0",
+    )[Amazon Web Services Certified Cloud Practitioner (AWS CCP)]
     September 2023
 
     = Skills
@@ -155,5 +176,5 @@
       [ #fa-figma() Figma ],
       [  Inkscape ],
     )
-  ]
+  ],
 )
