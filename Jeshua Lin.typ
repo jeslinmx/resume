@@ -22,13 +22,11 @@
       organisation: link("https://www.htx.com", "HTX"),
       location: "Singapore",
     )[
-      Administering a leading cryptocurrency exchange's platform, ensuring _security, robustness and compliance_ in a high-stakes, fast-paced environment.
+      Orchestrating _IaC/production change validation_, zero-downtime _container deployments_, and _database schema modifications_ and _access management_ (IAM) to balance high-velocity feature roll-outs (e.g. new token listings, protocol updates) with stringent requirements on platform stability, uptime, data integrity, and regulatory compliance.
 
-      Orchestrating the lifecycle of critical database infrastructure, including _secure provisioning, access control, and regular permission audits_.
+      Administering _configuration enforcement_ across a fleet of 200+ VMs, maintaining strict environment parity, _system hardening_ and _observability_.
 
-      Managing the internal GitLab and associated CI/CD systems, _streamlining_ the review and deployment of application configuration changes to _enhance developer velocity and system stability_.
-
-      Contributing code to internal tooling, developing solutions to automate operational tasks and improve system monitoring and security capabilities.
+      Empowering cross-functional teams by _managing mission-critical GitLab environments_ and delivering bespoke _internal tooling_ that enhances developer productivity, eliminates toil, and reduces time-to-production for new features.
     ]
 
     #milestone(
@@ -107,19 +105,19 @@
     #taglist(
       [ 󱂚 Ansible ],
       [ 󰡨 Docker ],
-      [ 󱃾 Kubernetes ],
       [ 󱄅 Nix ],
       [  Git ],
       [  Prometheus ],
       [  Grafana ],
     )
 
-    === Infrastructure
+    === Infrastructure Management
     #taglist(
       [ 󰸏 Amazon Web Services ],
-      [ Proxmox VE ],
-      [ 󱄅 NixOps ],
       [ 󱁢 Terraform ],
+      [ 󱄅 NixOps ],
+      [ Proxmox VE ],
+      [ VMWare ESXi ],
     )
 
     === Programming
