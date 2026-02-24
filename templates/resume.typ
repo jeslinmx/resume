@@ -25,7 +25,7 @@
     )
   )
   set text(
-    font: ("Assistant", "Symbols Nerd Font"),
+    font: ("Symbols Nerd Font", "Assistant"),
     size: 10pt,
     fill: luma(30),
     lang: "en",
