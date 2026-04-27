@@ -70,7 +70,7 @@
       ),
       location: "Singapore",
     )[
-      Automated the fluid dynamics team’s existing computational fluid dynamics (CFD) workflow, reducing the _burden of manual setup_ and _reducing simulation preparation time by over 80%_.
+      Automated the fluid dynamics team’s existing computational fluid dynamics (CFD) workflow, _eliminating toil_ and _reducing simulation preparation time by over 80%_.
 
       - Developed a simulation parameterization tool that allowed the team to batch generate the simulation definition files for _a design study in one step_, speeding up the process of design evaluation.
       - Reduced time-consuming customization from up to 30 minutes per design variation to a _streamlined, automated process_, enabling _faster turnaround for design studies_.
